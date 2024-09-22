@@ -12,6 +12,25 @@ mongoose.connect("mongodb://localhost:27017/Employee")
 .then(() => console.log("MongoDB connected"))
 .catch((error) => console.error("MongoDB connection failed:", error));
 
+    app.post('/login', (req, res) => {
+        const {email, password} = req.body;
+        Employee.findOne({email : email})
+        .then(user =>{
+            if(user){
+                if(user.password === password){
+                    res.json("SUCCESS")
+                }else{
+                    res.json("PASSWORD IS WRONG")
+                }
+            }else{
+                res.json("NO RECORD EXIST")
+            }
+        })
+
+    });
+  
+
+
 // POST route for registering an employee
 app.post('/register', (req, res) => {
     Employee.create(req.body)
