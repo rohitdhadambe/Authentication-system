@@ -58,7 +58,7 @@ const Signup = () => {
       <div>
         <button
           type="submit"
-          className="w-full px-4 py-2 bg-yellow-300 text-white rounded-md hover: bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-500 ease-in-out transform hover:scale-105"
+          className="w-full px-4 py-2  text-white rounded-md hover: bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-500 ease-in-out transform hover:scale-105"
         >
           Register
         </button>
