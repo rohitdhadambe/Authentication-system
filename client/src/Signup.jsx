@@ -15,7 +15,7 @@ const Signup = () => {
         e.preventDefault()
         axios. post('http://localhost:3001/register',{name, email, password})   //request frontend
          .then (result =>{console.log(result)
-          Navigate('/login')
+          Navigate('/')
          })
          .catch (err=> console. log(err))
     }
@@ -65,7 +65,7 @@ const Signup = () => {
       </div>
     </form>
     <p className="text-center mt-4 text-sm text-gray-600">
-      Already have an account? <Link className="text-blue-500 hover:underline" to="/login">Login here</Link>
+      Already have an account? <Link className="text-blue-500 hover:underline" to="/">Login here</Link>
     </p>
   </div>
 </div>
