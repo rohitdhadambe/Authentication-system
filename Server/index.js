@@ -7,7 +7,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect("mongodb://localhost:27017/Employee")
+//mongoose.connect("mongodb://localhost:27017/Employee")
+mongoose.connect("mongodb+srv://rohitdhadambe:Rohit%40%23%24123@cluster0.fjstk.mongodb.net/EmployeeDB?retryWrites=true&w=majority")
 
 .then(() => console.log("MongoDB connected"))
 .catch((error) => console.error("MongoDB connection failed:", error));
