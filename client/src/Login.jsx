@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault(); // Prevent page reload on form submit
 
     // Axios POST request to the backend API
-    axios.post('http://localhost:3001/login', { email, password })
+    axios.post('https://react-login-project.vercel.app/login', { email, password })
       .then((result) => {
         console.log(result.data);
         if (result.data === "SUCCESS") {

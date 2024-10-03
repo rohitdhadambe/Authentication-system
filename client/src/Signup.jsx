@@ -13,7 +13,7 @@ const Signup = () => {
 
     const handlesubmit=(e)=>{
         e.preventDefault()
-        axios. post('http://localhost:3001/register',{name, email, password})   //request frontend
+        axios. post('https://react-login-project.vercel.app/register',{name, email, password})   //request frontend
          .then (result =>{console.log(result)
           Navigate('/')
          })
