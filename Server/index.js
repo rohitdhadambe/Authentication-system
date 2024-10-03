@@ -6,25 +6,25 @@ const Employee = require('./models/Employee');
 const app = express();
 app.use(express.json());
 app.use(cors(
-    {
-        origin: function (origin, callback) {
-            // Define the list of allowed origins
-            const allowedOrigins = ['http://localhost:3001'];
+    // {
+    //     origin: function (origin, callback) {
+    //         // Define the list of allowed origins
+    //         const allowedOrigins = [' http://localhost:5173/'];
         
-            // Allow requests with no origin (like mobile apps or curl requests)
-            if (!origin) return callback(null, true);
+    //         // Allow requests with no origin (like mobile apps or curl requests)
+    //         if (!origin) return callback(null, true);
         
-            if (allowedOrigins.includes(origin)) {
-              // If the origin is in the allowed list, allow the request
-              callback(null, true);
-            } else {
-              // Otherwise, deny the request
-              callback(new Error('Not allowed by CORS'));
-            }
-          },
-          methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
-          credentials: true, // Allow cookies or other credentials in cross-domain requests
-    }
+    //         if (allowedOrigins.includes(origin)) {
+    //           // If the origin is in the allowed list, allow the request
+    //           callback(null, true);
+    //         } else {
+    //           // Otherwise, deny the request
+    //           callback(new Error('Not allowed by CORS'));
+    //         }
+    //       },
+    //       methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
+    //       credentials: true, // Allow cookies or other credentials in cross-domain requests
+    // }
 ));
 
 //mongoose.connect("mongodb://localhost:27017/Employee")  //local connection
